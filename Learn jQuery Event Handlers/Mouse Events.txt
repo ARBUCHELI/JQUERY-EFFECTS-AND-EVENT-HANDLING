@@ -56,6 +56,150 @@ $(document).ready(() => {
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* On 'mouseenter'
+-----------------
+Another popular jQuery event listener is mouseenter. The mouseenter event triggers a callback function when a user enters the area that a targeted element occupies.
+
+To listen for a mouse enter event, we can use the mouseenter event listener. Take a look at this code and compare it with the click function you learned in the previous exercises:
+
+$('.example-class').on('mouseenter',  () => {
+    // Execute code here when mouse enters .example-class
+});
+
+	. As before, .on() is called on a jQuery object that selects .example-class elements.
+
+	. The first argument for .on() is the 'mouseenter' event handler. The code above will trigger the callback function when the mouse enters an .example-class element’s area.
+
+* Instructions
+--------------
+Checkpoint 1 Passed
+1.
+Inside of the .ready() callback function, create an event handler that targets the element with class menu-button. The event handler should listen for a mouse enter event.
+
+Pass the method an empty callback function.
+
+
+Hint
+Use the .on() method with a 'mouseenter' argument to add a mouse enter event listener.
+
+Checkpoint 2 Passed
+2.
+Inside of the callback function, use the .show() method to display the .nav-menu element.
+
+
+Hint
+Append .show() to $('.nav-menu')
+
+main.js
+-------
+$(document).ready(() => {
+  $('.login-button').on('click', () => {
+    $('.login-form').show();
+  });
+  $('.menu-button').on('mouseenter', () => {
+    $('.nav-menu').show();
+  })
+}); 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* On 'mouseleave'
+-----------------
+One issue with the behavior we added to our Sole Shoes website in the last exercise is that the menu remains in the DOM after the mouse leaves the menu area.
+
+The mouseleave event listener can detect when a user’s mouse leaves the area that an element occupies. The syntax looks like:
+
+$('.example-class').on('mouseleave', function() {
+    // Execute code here when mouse leaves .example-class
+});
+
+In the example code above, a user will trigger the callback function when their mouse leaves the .example-class area.
+
+* Instructions
+--------------
+Checkpoint 1 Passed
+1.
+In the ready callback function, target the .nav-menu element, and add an event handler with a mouseleave event listener and empty callback function.
+
+Checkpoint 2 Passed
+2.
+Inside the empty callback function, use the .hide() method to hide the .nav-menu element when a user’s mouse leaves the navigation menu.
+
+main.js
+-------
+$(document).ready(() => {
+  $('.login-button').on('click', () => {
+    $('.login-form').show();
+  });
+  
+  $('.menu-button').on('mouseenter', () => {
+    $('.nav-menu').show()
+  })
+  
+  $('.nav-menu').on('mouseleave', () => {
+    $('.nav-menu').hide();
+  })
+}); 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
